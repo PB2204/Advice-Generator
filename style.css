@@ -1,0 +1,125 @@
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap");
+
+/* Root */
+:root {
+    /* Color Palette */
+    --light-cyan: hsl(193, 38%, 86%);
+    --neon-green: hsl(150, 100%, 66%);
+    --grayish-blue: hsl(217, 19%, 38%);
+    --dark-grayish-blue: hsl(217, 19%, 24%);
+    --dark-blue: hsl(218, 23%, 16%);
+}
+
+/* Base */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Manrope", sans-serif;
+    min-height: 100vh;
+    background-color: var(--dark-blue);
+    font-weight: 800;
+}
+
+.quote-container {
+    background-color: var(--dark-grayish-blue);
+    max-width: 450px;
+    padding: 2rem;
+    margin: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    position: relative;
+}
+
+.advice-no {
+    font-size: 10px;
+    color: #ec3e09;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+#advice {
+    font-size: 18px;
+    color: var(--light-cyan);
+    letter-spacing: 1px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.separator {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#advice-btn {
+    background-color: var(--neon-green);
+    border: none;
+    outline: line;
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -25px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    user-select: none;
+}
+
+#advice-btn:hover {
+    box-shadow: 0 0 8px 1px var(--neon-green);
+}
+
+#advice-btn:active {
+    animation: roll 0.2s;
+}
+
+@keyframes roll {
+    0% {
+        transform: rotate(-30deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}
+
+.attribution {
+    color: var(--light-cyan);
+    position: fixed;
+    bottom: 2%;
+    margin: 0 2rem;
+    text-align: center;
+}
+
+.attribution a {
+    color: var(--light-cyan);
+}
+
+.attribution a:hover {
+    color: var(--neon-green);
+    text-decoration: none;
+}
+
+.cent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.static_page .item-post h1.post-title {
+    display: none;
+}
